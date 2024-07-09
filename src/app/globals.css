@@ -1,5 +1,23 @@
 @tailwind base;
 @tailwind components;
+
+@layer components {
+  .btn {
+    @apply w-full py-[12px] px-[24px] bg-slate-950 text-white rounded-[12px];
+  }
+
+  .label {
+    @apply text-[16px] leading-[26px] font-[500] text-[#071133];
+  }
+
+  .errorMessage {
+    @apply text-red-500 text-sm;
+  }
+  .center {
+    @apply flex items-center justify-center;
+  }
+}
+
 @tailwind utilities;
 
 :root {
@@ -28,10 +46,23 @@ body {
   scroll-behavior: smooth;
 }
 
+.react-datepicker-wrapper {
+  width: 100% !important;
+}
+
+.react-datepicker__input-container {
+  width: 100% !important;
+}
+
 ::-webkit-scrollbar {
   display: none;
 }
 
+@layer components {
+  .inputPrimary {
+    @apply outline-none px-[20px] py-0 h-[50px] rounded-[15px] border-[1px] border-[#e2e8f0] text-black w-full;
+  }
+}
 @layer utilities {
   .text-balance {
     text-wrap: balance;
