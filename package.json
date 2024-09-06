@@ -22,7 +22,7 @@
     "formik": "^2.4.6",
     "framer-motion": "^11.0.27",
     "js-cookie": "^3.0.5",
-    "keep-react": "^1.2.0",
+    "keep-react": "^1.5.0",
     "next": "14.1.4",
     "phosphor-react": "^1.4.1",
     "react": "^18",
