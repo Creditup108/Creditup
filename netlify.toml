@@ -1,6 +1,7 @@
 [build]
   command = "npm ci && npm run build"
   publish = ".next"
+  ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF ./package-lock.json"
 
 [build.environment]
   NODE_VERSION = "20"
@@ -12,7 +13,3 @@
 # This tells Netlify to use Node.js to run your build command
 [functions]
   node_bundler = "esbuild"
-
-# Optional: Ignore builds if only the lockfile has changed
-[build]
-  ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF ./package-lock.json"
